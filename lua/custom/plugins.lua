@@ -53,7 +53,10 @@ local plugins = {
         "prettier",
         "stylua",
         "lua-language-server",
-        "pyright"
+        "pyright",
+        "docker-compose-language-server",
+        "dockerfile-language-server",
+        "marksman"
       },
     },
   },
@@ -72,7 +75,6 @@ local plugins = {
       "nvim-lua/plenary.nvim",
     },
     config = true,
-    keys = require("custom.configs.neogit").keys,
   },
   {
     "scalameta/nvim-metals",

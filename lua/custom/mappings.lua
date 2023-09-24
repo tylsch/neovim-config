@@ -6,5 +6,12 @@ M.telescope = {
     }
   }
 }
+M.neogit = {
+  n = {
+    ["<A-g>"] = {
+      "<cmd> Neogit <CR>", "Open Neogit"
+    }
+  }
+}
 
 return M
