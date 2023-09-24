@@ -66,6 +66,15 @@ local plugins = {
     },
   },
   {
+    "NeogitOrg/neogit",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = true,
+    keys = require("custom.configs.neogit").keys,
+  },
+  {
     "scalameta/nvim-metals",
     ft = { "scala", "sbt" },
     dependencies = {
