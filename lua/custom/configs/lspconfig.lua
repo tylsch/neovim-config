@@ -31,5 +31,5 @@ lspconfig.pyright.setup{
 lspconfig.volar.setup{
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json", "css" },
 }
