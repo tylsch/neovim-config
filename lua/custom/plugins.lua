@@ -38,6 +38,7 @@ local plugins = {
         "scss",
         "smithy",
         "sql",
+        "svelte",
         "typescript",
         "xml",
         "yaml"
@@ -56,7 +57,8 @@ local plugins = {
         "pyright",
         "docker-compose-language-server",
         "dockerfile-language-server",
-        "marksman"
+        "marksman",
+        "svelte-language-server"
       },
     },
   },

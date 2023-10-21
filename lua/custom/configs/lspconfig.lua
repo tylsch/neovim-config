@@ -28,8 +28,15 @@ lspconfig.pyright.setup{
   filetypes = { "python" }
 }
 
+lspconfig.svelte.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "svelte" }
+}
+
 lspconfig.volar.setup{
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "typescript", "javascript", "javascriptreact", "javascriptreact.jsx", "typescriptreact", "typescriptreact.tsx", "vue", "json", "css" },
 }
+
