@@ -1,7 +1,10 @@
 local configs = require("plugins.configs.lspconfig")
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
+local java = require('java')
 local lspconfig = require "lspconfig"
+
+java.setup()
 
 lspconfig.docker_compose_language_service.setup{
   on_attach = on_attach,
@@ -13,6 +16,12 @@ lspconfig.dockerls.setup{
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "dockerfile" }
+}
+
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "java" }
 }
 
 lspconfig.marksman.setup{

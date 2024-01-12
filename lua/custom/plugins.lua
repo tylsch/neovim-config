@@ -3,14 +3,14 @@ local plugins = {
     "neovim/nvim-lspconfig",
     dependencies = {
       "nvimtools/none-ls.nvim",
-      config = function ()
+      config = function()
         require "custom.configs.null-ls"
       end,
     },
-    config = function ()
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -41,7 +41,7 @@ local plugins = {
         "svelte",
         "typescript",
         "xml",
-        "yaml"
+        "yaml",
       },
     },
   },
@@ -58,16 +58,16 @@ local plugins = {
         "docker-compose-language-server",
         "dockerfile-language-server",
         "marksman",
-        "svelte-language-server"
+        "svelte-language-server",
       },
     },
   },
   {
     "nvim-telescope/telescope.nvim",
     opts = {
-      extensions = function ()
+      extensions = function()
         return require("metals").commands()
-      end
+      end,
     },
   },
   {
@@ -94,9 +94,30 @@ local plugins = {
         callback = function()
           require("metals").initialize_or_attach(metals_config)
         end,
-        group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+        group = vim.api.nvim_create_augroup("nvim-metals", { clear = true }),
       })
     end,
+  },
+  {
+    "nvim-java/nvim-java",
+    dependencies = {
+      "nvim-java/lua-async-await",
+      "nvim-java/nvim-java-core",
+      "nvim-java/nvim-java-test",
+      "nvim-java/nvim-java-dap",
+      "MunifTanjim/nui.nvim",
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          registries = {
+            "github:nvim-java/mason-registry",
+            "github:mason-org/mason-registry",
+          },
+        },
+      },
+    },
   },
 }
 return plugins
