@@ -3,6 +3,7 @@ local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 local java = require "java"
 local lspconfig = require "lspconfig"
+local home = os.getenv('HOME')
 
 java.setup()
 
@@ -28,7 +29,7 @@ lspconfig.jdtls.setup {
         runtimes = {
           {
             name = "JavaSE-21",
-            path = "~/.sdkman/candidates/java/21.0.1-graal/",
+            path = home .. "/.sdkman/candidates/java/21.0.1-graal/",
             default = true,
           },
         },
